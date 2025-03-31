@@ -4,7 +4,7 @@ import "./AddProduct.css";
 import axios from "axios";
 import RemoveProduct from "../RemoveProduct/RemoveProduct";
 import HandleClick from "../RemoveProduct/RemoveProduct";
-import { itemCategory } from "../../Constants";
+import { ADMIN_URL, itemCategory } from "../../Constants";
 import { toast } from "react-toastify";
 
 const AddProduct = () => {
@@ -24,7 +24,7 @@ const AddProduct = () => {
   };
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    const AddURL = "http://localhost:8080";
+    const AddURL = ADMIN_URL;
     var formData = new FormData();
     formData.append("name", productDetails.name);
     formData.append("description", String(productDetails.description));

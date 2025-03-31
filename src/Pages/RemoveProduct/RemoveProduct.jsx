@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
+import { ADMIN_URL } from "../../Constants";
 
 // let button = new Button();
 const RemoveProduct = () => {
   const [responseData, setResponseData] = useState({});
   var idList = [];
   const deleteFoodItem = async (res) => {
-    const deleteURL = "http://localhost:8080/api/v1/food/removeItem";
+    const deleteURL = `${ADMIN_URL}api/v1/food/removeItem`;
+    // const deleteURL = "http://localhost:8080/api/v1/food/removeItem";
     res?.map((id) => idList.push(id?._id));
 
     try {
@@ -24,7 +26,8 @@ const RemoveProduct = () => {
 
   function HandleClick() {
     axios
-      .get("http://localhost:8080/api/v1/food/getFoodList")
+      // .get("http://localhost:8080/api/v1/food/getFoodList")
+      .get(`${ADMIN_URL}api/v1/food/getFoodList`)
       .then((response) => {
         if (response.data) {
           console.log("***res", response);
