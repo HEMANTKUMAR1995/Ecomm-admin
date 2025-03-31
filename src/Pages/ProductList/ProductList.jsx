@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./ProductList.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { StoreContext } from "../../../../../frontend/frontend/src/Context/StoreContext";
 
 const ProductList = ({ url }) => {
   const [ProductList, setProductList] = useState([]);
