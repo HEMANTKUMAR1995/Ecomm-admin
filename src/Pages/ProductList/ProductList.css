@@ -1,0 +1,25 @@
+.list-table-format {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 0px 20px;
+  padding: 12px 15px;
+  border: 1px solid grey;
+  font-size: 15px;
+}
+
+.list-table-format.title {
+  background-color: #d6dfeb;
+}
+
+.list-table-format img {
+  width: 150px;
+}
+
+div.list-table-format p:nth-of-type(4) {
+  font-size: x-large;
+  cursor: pointer;
+}
+.food-list{
+margin-left: 10%;
+}
