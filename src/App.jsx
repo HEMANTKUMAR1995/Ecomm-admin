@@ -7,9 +7,10 @@ import ProductList from "./Pages/ProductList/ProductList";
 import ProductOrder from "./Pages/ProductOrders/ProductOrder";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ADMIN_URL } from "./Constants";
 
 function App() {
-  const URL = "http://localhost:8080";
+  const URL = ADMIN_URL;
   return (
     <div>
       <ToastContainer />
